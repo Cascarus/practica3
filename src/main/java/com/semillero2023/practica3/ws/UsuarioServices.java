@@ -1,5 +1,7 @@
 package com.semillero2023.practica3.ws;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,6 +14,8 @@ import com.semillero2023.practica3.entity.Usuario;
 
 @Component
 public class UsuarioServices implements UsuarioServicesInt{
+	
+	private static final Log LOG = LogFactory.getLog(UsuarioServices.class);
 
 	@Autowired
 	UsuarioRepository usuarioRepository;
@@ -31,6 +35,7 @@ public class UsuarioServices implements UsuarioServicesInt{
 			}
 			return new ResponseEntity<>(jwtGenerator.generateToken(user), HttpStatus.OK);
 		} catch (Exception e) {
+			LOG.error(e.getStackTrace());
 			return new ResponseEntity<>(e.getMessage(), HttpStatus.CONFLICT);
 		}
 	}

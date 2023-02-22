@@ -5,6 +5,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Function;
 
+
+import org.apache.juli.logging.Log;
+import org.apache.juli.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -16,6 +19,7 @@ import io.jsonwebtoken.SignatureAlgorithm;
 
 @Service
 public class JwtGeneratorImpl implements JwtGeneratorInterface {
+	private static final Log LOG = LogFactory.getLog(JwtGeneratorImpl.class);
 
 	@Value("${jwt.secret}")
 	private String secret;
@@ -39,9 +43,10 @@ public class JwtGeneratorImpl implements JwtGeneratorInterface {
 		jwtToken = Jwts.builder().setSubject(user.getUsername()).setIssuedAt(new Date())
 				.setIssuedAt(new Date())
 				.setExpiration(new Date(System.currentTimeMillis() + (5000*60)))
-				.signWith(SignatureAlgorithm.HS256, "secret")
 				.compact();
 		Map<String, String> jwtTokenGen = new HashMap<>();
+		
+		LOG.info("Hola mundo");
 		jwtTokenGen.put("token", jwtToken);
 		return jwtTokenGen;
 	}
