@@ -13,7 +13,9 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
+import lombok.Data;
 
+@Data
 @Entity
 @Table(name="COMPANIAS")
 @DynamicUpdate @DynamicInsert
@@ -50,78 +52,6 @@ public class Companias implements Serializable {
 	@ManyToMany(mappedBy = "companiaSeguros")
 	@JsonBackReference
 	private List<Seguros> seguros;
-
-	public String getNombreCompania() {
-		return nombreCompania;
-	}
-
-	public void setNombreCompania(String nombreCompania) {
-		this.nombreCompania = nombreCompania;
-	}
-
-	public String getClaseVia() {
-		return claseVia;
-	}
-
-	public void setClaseVia(String claseVia) {
-		this.claseVia = claseVia;
-	}
-
-	public String getNombreVia() {
-		return nombreVia;
-	}
-
-	public void setNombreVia(String nombreVia) {
-		this.nombreVia = nombreVia;
-	}
-
-	public Integer getNumberoVia() {
-		return numberoVia;
-	}
-
-	public void setNumberoVia(Integer numberoVia) {
-		this.numberoVia = numberoVia;
-	}
-
-	public Integer getCodPostal() {
-		return codPostal;
-	}
-
-	public void setCodPostal(Integer codPostal) {
-		this.codPostal = codPostal;
-	}
-
-	public String getTelefonoContratacion() {
-		return telefonoContratacion;
-	}
-
-	public void setTelefonoContratacion(String telefonoContratacion) {
-		this.telefonoContratacion = telefonoContratacion;
-	}
-
-	public String getTelefonoSiniestros() {
-		return telefonoSiniestros;
-	}
-
-	public void setTelefonoSiniestros(String telefonoSiniestros) {
-		this.telefonoSiniestros = telefonoSiniestros;
-	}
-
-	public String getNotas() {
-		return notas;
-	}
-
-	public void setNotas(String notas) {
-		this.notas = notas;
-	}
-
-	public List<Seguros> getSeguros() {
-		return seguros;
-	}
-
-	public void setSeguros(List<Seguros> seguros) {
-		this.seguros = seguros;
-	}
 
 	
 }
