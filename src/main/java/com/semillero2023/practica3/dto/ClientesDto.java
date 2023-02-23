@@ -17,7 +17,7 @@ public class ClientesDto {
 
 	private String nombreVia;
 
-	private Integer numerovia;
+	private Integer numeroVia;
 
 	private Integer codPostal;
 
