@@ -2,6 +2,8 @@ package com.semillero2023.practica3.config;
 
 import java.io.IOException;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.springframework.web.filter.GenericFilterBean;
 
 import io.jsonwebtoken.Claims;
@@ -14,7 +16,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 public class JwtFilter extends GenericFilterBean {
-	
+	private static final Log LOG= LogFactory.getLog(JwtFilter.class);
 	@Override
 	public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain)
 			throws IOException, ServletException {
@@ -30,8 +32,12 @@ public class JwtFilter extends GenericFilterBean {
 			}
 		}
 		final String token = authHeader.substring(7);
-		Claims claims = Jwts.parser().setSigningKey("secret").parseClaimsJws(token).getBody();
-		request.setAttribute("claims", claims);
-		filterChain.doFilter(request, response);
+		try {
+			Claims claims = Jwts.parser().setSigningKey("secret").parseClaimsJws(token).getBody();
+			request.setAttribute("claims", claims);
+			filterChain.doFilter(request, response);	
+		}catch(Exception e) {
+			LOG.info(e);
+		}
 	}
 }
