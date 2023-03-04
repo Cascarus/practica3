@@ -59,7 +59,7 @@ public class Clientes implements Serializable{
 	@Column(name="OBSERVACIONES")
 	private String observaciones;
 	
-	@OneToMany(mappedBy ="dniCl", fetch = FetchType.EAGER)
+	@OneToMany(mappedBy ="dniCl", fetch = FetchType.LAZY)
 	private List<Seguros> seguros = new ArrayList<>();
 
 }

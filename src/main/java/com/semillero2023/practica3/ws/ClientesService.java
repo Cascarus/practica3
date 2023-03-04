@@ -11,6 +11,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 
+import com.semillero2023.practica3.config.JwtGeneratorImpl;
 import com.semillero2023.practica3.dto.ClientesDto;
 import com.semillero2023.practica3.entity.Clientes;
 import com.semillero2023.practica3.repository.ClientesRepository;
@@ -19,7 +20,7 @@ import com.semillero2023.practica3.wsint.ClientesServiceInt;
 
 @Component
 public class ClientesService implements ClientesServiceInt {
-	private static final Log LOG = LogFactory.getLog(ClientesService.class);
+	private static final Log LOG = LogFactory.getLog(JwtGeneratorImpl.class);
 	@Autowired
 	ClientesRepository clientesRepository;
 
@@ -56,10 +57,8 @@ public class ClientesService implements ClientesServiceInt {
 	@Override
 	public ResponseEntity<String> deleteCliente(Integer dni) {
 		Optional<Clientes> client = clientesRepository.findBydniCl(dni);
-		LOG.info("LLEGO AL ELEMINAR CON EL CLIENTE ID -> " + dni);
 
 		if (client.isPresent()) {
-			LOG.info("LLEGO AL ELEMINAR SEGUROS -> " + client.get().getDniCl());
 			segurosRepository.deleteAll(client.get().getSeguros());
 			clientesRepository.delete(client.get());
 			return new ResponseEntity<>("El cliente se ha eliminado exitosamente", HttpStatus.OK);
