@@ -10,7 +10,7 @@ import org.apache.juli.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
-import com.semillero2023.practica3.entity.Usuario;
+import com.semillero2023.mi_libreria.entity.Usuario;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

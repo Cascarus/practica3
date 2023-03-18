@@ -10,7 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.ResponseEntity;
 
-import com.semillero2023.practica3.entity.Usuario;
+import com.semillero2023.mi_libreria.entity.Usuario;
 import com.semillero2023.practica3.ws.ClientesService;
 import com.semillero2023.practica3.ws.UsuarioServices;
 

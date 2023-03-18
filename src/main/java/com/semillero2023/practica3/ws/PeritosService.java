@@ -10,7 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 
 import com.semillero2023.practica3.dto.PeritoDto;
-import com.semillero2023.practica3.entity.Peritos;
+import com.semillero2023.mi_libreria.entity.Peritos;
 import com.semillero2023.practica3.repository.PeritosRepository;
 import com.semillero2023.practica3.repository.SiniestrosRepository;
 import com.semillero2023.practica3.wsint.PeritosServiceInt;

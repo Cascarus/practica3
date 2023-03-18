@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.semillero2023.practica3.dto.CompaniaDto;
-import com.semillero2023.practica3.entity.Companias;
+import com.semillero2023.mi_libreria.entity.Companias;
 
 @CrossOrigin
 @RestController

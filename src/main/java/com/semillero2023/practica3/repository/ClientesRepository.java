@@ -7,7 +7,7 @@ import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.semillero2023.practica3.entity.Clientes;
+import com.semillero2023.mi_libreria.entity.Clientes;
 
 
 @Repository("ClientesRepository")

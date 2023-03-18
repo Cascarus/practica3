@@ -1,7 +1,6 @@
 package com.semillero2023.practica3;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.fail;
 
 import java.util.List;
@@ -14,7 +13,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.ResponseEntity;
 
 import com.semillero2023.practica3.dto.ClientesDto;
-import com.semillero2023.practica3.entity.Clientes;
+import com.semillero2023.mi_libreria.entity.Clientes;
 import com.semillero2023.practica3.ws.ClientesService;
 
 @SpringBootTest

@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.semillero2023.practica3.dto.SegurosDto;
-import com.semillero2023.practica3.entity.Seguros;
+import com.semillero2023.mi_libreria.entity.Seguros;
 
 @CrossOrigin
 @RestController

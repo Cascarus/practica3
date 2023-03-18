@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.semillero2023.practica3.dto.SiniestroDto;
-import com.semillero2023.practica3.entity.Siniestros;
+import com.semillero2023.mi_libreria.entity.Siniestros;
 
 @CrossOrigin
 @RestController

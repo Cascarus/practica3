@@ -12,7 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import com.semillero2023.practica3.dto.PeritoDto;
-import com.semillero2023.practica3.entity.Peritos;
+import com.semillero2023.mi_libreria.entity.Peritos;
 import com.semillero2023.practica3.ws.PeritosService;
 
 @SpringBootTest

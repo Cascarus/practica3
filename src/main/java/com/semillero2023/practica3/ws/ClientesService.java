@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 
 import com.semillero2023.practica3.config.JwtGeneratorImpl;
 import com.semillero2023.practica3.dto.ClientesDto;
-import com.semillero2023.practica3.entity.Clientes;
+import com.semillero2023.mi_libreria.entity.Clientes;
 import com.semillero2023.practica3.repository.ClientesRepository;
 import com.semillero2023.practica3.repository.SegurosRepository;
 import com.semillero2023.practica3.wsint.ClientesServiceInt;

@@ -10,7 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 
 import com.semillero2023.practica3.dto.CompaniaSeguroDto;
-import com.semillero2023.practica3.entity.CompaniaSeguro;
+import com.semillero2023.mi_libreria.entity.CompaniaSeguro;
 import com.semillero2023.practica3.repository.CompaniaSeguroRepository;
 import com.semillero2023.practica3.wsint.CompaniaSeguroServicesInt;
 

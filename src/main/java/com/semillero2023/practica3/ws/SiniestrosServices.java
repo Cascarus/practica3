@@ -13,8 +13,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 
 import com.semillero2023.practica3.dto.SiniestroDto;
-import com.semillero2023.practica3.entity.Seguros;
-import com.semillero2023.practica3.entity.Siniestros;
+import com.semillero2023.mi_libreria.entity.Seguros;
+import com.semillero2023.mi_libreria.entity.Siniestros;
 import com.semillero2023.practica3.repository.SegurosRepository;
 import com.semillero2023.practica3.repository.SiniestrosRepository;
 import com.semillero2023.practica3.wsint.SiniestrosServicesInt;
